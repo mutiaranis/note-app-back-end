@@ -1,30 +1,31 @@
-// karena menggunakan plugin, handler yg akan digunakan dimasukkan sebgai parameter fungsi makanya buat fungsi yang ngembaliin array
+// karena menggunakan plugin, handler yg akan digunakan
+// dimasukkan sebagai parameter fungsi makanya buat fungsi yang ngembaliin array
 const routes = (handler) => [
-    {
-        method: 'POST',
-        path: '/notes',
-        handler: handler.postNoteHandler, // postNoteHandler hanya menerima dan menyimpan "satu" note.
-    },
-    {
-        method: 'GET',
-        path: '/notes',
-        handler: handler.getNotesHandler, // getNotesHandler mengembalikan "banyak" note
-    },
-    {
-        method: 'GET',
-        path: '/notes/{id}',
-        handler: handler.getNoteByIdHandler, // getNoteByIdHandler mengembalikan "satu" note.
-    },
-    {
-        method: 'PUT',
-        path: '/notes/{id}',
-        handler: handler.putNoteByIdHandler, // putNoteByIdHandler hanya menerima dan mengubah "satu" note.
-    },
-    {
-        method: 'DELETE',
-        path: '/notes/{id}',
-        handler: handler.deleteNoteByIdHandler, // deleteNoteByIdHandler hanya menghapus "satu" note.
-    },
+  {
+    method: 'POST',
+    path: '/notes',
+    handler: handler.postNoteHandler, // postNoteHandler hanya menerima dan menyimpan "satu" note.
+  },
+  {
+    method: 'GET',
+    path: '/notes',
+    handler: handler.getNotesHandler, // getNotesHandler mengembalikan "banyak" note
+  },
+  {
+    method: 'GET',
+    path: '/notes/{id}',
+    handler: handler.getNoteByIdHandler, // getNoteByIdHandler mengembalikan "satu" note.
+  },
+  {
+    method: 'PUT',
+    path: '/notes/{id}',
+    handler: handler.putNoteByIdHandler, // putNoteByIdHandler hanya menerima dan mengubah 1 note.
+  },
+  {
+    method: 'DELETE',
+    path: '/notes/{id}',
+    handler: handler.deleteNoteByIdHandler, // deleteNoteByIdHandler hanya menghapus "satu" note.
+  },
 ];
 
 module.exports = routes;
